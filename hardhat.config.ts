@@ -48,7 +48,7 @@ function getChainConfig(chain: keyof typeof chainIds): NetworkUserConfig {
       jsonRpcUrl = "https://rpc.ftm.tools";
       break;
     default:
-      jsonRpcUrl = "https://" + chain + ".infura.io/v3/" + infuraApiKey;
+      jsonRpcUrl = "wss://" + chain + ".infura.io/ws/v3/" + infuraApiKey;
   }
   return {
     accounts: {
